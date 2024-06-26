@@ -11,9 +11,10 @@
 --white-color:#FFFFFF;
 --red-color:#DB2222;
 --grey-bg-color:#F2F3F4;
-
---border-color:#0000004D;
+--rating-color:#FFBA49;
+--border-color:#22222280;
 --background-color:#FCFCFC;
+--service-des-color:#737373
 }
 body{
   background-color: var(--background-color);
@@ -22,4 +23,26 @@ body{
   box-shadow: 0px 10px 20px -3px #919EAB0D; box-shadow: 0px 0px 2px 0px #919EAB33;
 }
 
+.productcard-shadow{
+  box-shadow: 0px 9.15px 18.29px -2.74px #919EAB0D; box-shadow: 0px 0px 1.83px 0px #919EAB33;
+}
+.footer-section{
 
+  background:linear-gradient(to right, rgba(23, 28, 45, 0.945), rgba(23, 28, 45, 0.97)), url(https://www.ittadyshop.xyz/public/65a378848724b.jpg);
+  background-position: top;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.footer-top{
+
+  background:  url(./../../public/footertop.png);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.footer-bottom{
+  background:  url(./../../public/footertop.png);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
