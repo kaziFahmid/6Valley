@@ -1,12 +1,43 @@
+import Image from "next/image"
 
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+  const{
+    name,
+    product_type,
+    unit,
+    images,
+    discount,
+    category:{name:categoryName},
+    purchase_price
+  }=props?.productsData
   return (
     <>
     <div className=" productcard-shadow bg-[var(--white-color)] p-[10px] rounded-[5px]">
-<div className="bg-red-600 h-[175px] rounded-[5px] relative">
-<div className="badge bg-[var(--red-color)] border-0 absolute -top-1 -left-1 text-[10.98px] font-extrabold text-[var(--white-color)]">+20%</div>
+<div className= 'rounded-[5px] relative'>
+<div>
+<Image src={`https://6valley.6amtech.com/storage/app/public/product/${images[0]}`}width={500} height={500} alt={name} className="  h-[175px] rounded-[5px] object-cover"/>
 </div>
+
+
+
+
+
+
+<div className="badge bg-[var(--red-color)] border-0 absolute -top-1 -left-1 text-[10.98px] font-extrabold text-[var(--white-color)]">+{discount}%</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <div className="text-center mt-[16.12px]">
   <div className="text-center flex justify-center items-center gap-[2px] mb-[3.96px]">
   <div class="rating rating-sm">
@@ -22,9 +53,9 @@ const ProductCard = () => {
 </div>
 <span className="text-[var(--grey-text-color)] text-[10px] font-normal">(asdfdsaf)</span>
   </div>
-  <p  className="text-[var(--grey-text-color)] text-[10.98px] font-normal">Morning Mart</p>
-  <h6 className="text-[var(--text-color)] text-[14.64px] font-bold">Evening Dress</h6>
-  <h6 className="text-[var(--text-color)] text-[14.64px] font-bold"><span className="text-[var(--grey-text-color)] text-[12.81px] font-normal ">15$</span>12$</h6>
+  <p  className="text-[var(--grey-text-color)] text-[10.98px] font-normal">{categoryName}</p>
+  <h6 className="text-[var(--text-color)] text-[14.64px] font-bold">{name}</h6>
+  <h6 className="text-[var(--text-color)] text-[14.64px] font-bold"><span className="text-[var(--grey-text-color)] text-[12.81px] font-normal line-through ">{purchase_price}$</span>{' '}{purchase_price-purchase_price*discount/100}$</h6>
 </div>
     </div>
     </>

@@ -1,7 +1,14 @@
 import ProductCard from "../ProductCard/ProductCard"
+import { getProducts } from "@/api/getProducts";
 
-
-const AllProducts = () => {
+const AllProducts = async () => {
+    let allProducts= await getProducts();
+console.log(allProducts)
+if(allProducts?.error){
+    return<div className="text-center mt-[40px]">
+        <h2 className="text-[var(--red-color)]">{products?.error}</h2>
+    </div>
+}
   return (
     <>
     <div className="container mx-auto mt-[40px]">
@@ -11,7 +18,7 @@ const AllProducts = () => {
 <div className="mt-[25px] grid grid-cols-5 gap-[15px]">
 
 
-{[2,3,4,5,3,2,6].map((item,index)=> <ProductCard key={index}/>)}
+{allProducts?.products?.map((data,index)=> <ProductCard key={index} productsData={data}/>)}
     </div>
     </div>
     
