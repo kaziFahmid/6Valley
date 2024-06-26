@@ -4,8 +4,7 @@ import Image from "next/image"
 const ProductCard = (props) => {
   const{
     name,
-    product_type,
-    unit,
+    rating,
     images,
     discount,
     category:{name:categoryName},
@@ -51,7 +50,7 @@ const ProductCard = (props) => {
   <input type="radio" name="rating-6" class="mask mask-star-2 bg-[var(--rating-color)]" />
   <input type="radio" name="rating-6" class="mask mask-star-2 bg-[var(--rating-color)]" />
 </div>
-<span className="text-[var(--grey-text-color)] text-[10px] font-normal">(asdfdsaf)</span>
+<span className="text-[var(--grey-text-color)] text-[10px] font-normal">({ parseFloat(rating[0]?.average).toFixed(1)})</span>
   </div>
   <p  className="text-[var(--grey-text-color)] text-[10.98px] font-normal">{categoryName}</p>
   <h6 className="text-[var(--text-color)] text-[14.64px] font-bold">{name}</h6>
