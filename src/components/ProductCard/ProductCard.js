@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { Rating } from "primereact/rating";
 const ProductCard = (props) => {
   const {
     name,
@@ -58,17 +58,8 @@ const ProductCard = (props) => {
 
         <div className="text-center mt-[16.12px]">
           <div className="text-center flex justify-center items-center gap-[2px] mb-[3.96px]">
-            <div className="rating rating-sm">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <input
-                  key={index}
-                  type="radio"
-                  name="rating"
-                  className="mask mask-star-2 bg-[var(--rating-color)]"
-                  checked={index < Math.floor(parseFloat(rating[0]?.average))}
-                />
-              ))}
-            </div>
+          
+            <Rating value={Math.floor(parseFloat(rating[0]?.average))} readOnly cancel={false}  style={{color:"var(--rating-color)"}} />
             <span className="text-[var(--grey-text-color)] text-[10px] font-normal">
               ({Math.floor(parseFloat(rating[0]?.average))})
             </span>
