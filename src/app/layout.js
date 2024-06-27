@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
+
 const mulish = Mulish({  weight: [ "400", "500", "600", "700", "800"], subsets: ["latin"] });
 
 export const metadata = {
@@ -15,12 +16,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={mulish.className}>
+       
         <Header/>
     <div className="min-h-screen">
+
     {children}
     </div>
     <Footer/>
-
+   
         </body>
     </html>
   );

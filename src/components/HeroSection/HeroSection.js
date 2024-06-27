@@ -1,8 +1,10 @@
+
+
 import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { browserCategoriesLists } from "./browserCategoriesLists";
 import { Roboto, Russo_One} from "next/font/google";
-import { getCategories } from "@/api/getCategories";
+import Categories from "../Categories/Categories";
+
 const russone = Russo_One({  weight: [ "400"], subsets: ["latin"] });
 
 const roboto=Roboto( {
@@ -16,47 +18,14 @@ const roboto=Roboto( {
 
 
 
+const HeroSection =() => {
 
 
-
-
-
-
-
-
-const HeroSection =async () => {
-  let allCategories= await getCategories();
-console.log(allCategories)
-  if(allCategories?.error){
-      return<div className="text-center mt-[40px]">
-          <h2 className="text-[var(--red-color)]">{allCategories?.error}</h2>
-      </div>
-  }
   return (
     <>
       <div className="container mx-auto lg:grid grid-cols-12  hidden">
-        <div className=" rounded-[5px] xl:col-span-2 col-span-12 ">
-          <div className="drop-shadow bg-[var(--white-color)] rounded-[5px] ps-[15px] pr-[23px] h-[395px] overflow-y-auto scrollbar ">
-            {allCategories?.map((item, index, arr) => (
-              <div
-                key={index}
-                style={{
-                  borderBottom:
-                    index !== arr.length - 1
-                      ? "1px solid rgba(185, 185, 185, 0.2)"
-                      : "none",
-                }}
-                className="  bg-[var(--white-color)]  flex justify-between items-center px-5 py-[11px] w-full"
-              >
-                <div className="flex justify-start items-center gap-[16px]">
-                  <h6 className={`font-normal text-[13px] text-[var(--text-color)]`}>
-                    {item?.name}
-                  </h6>
-                </div>
-                <MdKeyboardArrowDown className="text-[var(--text-color)] -rotate-90" />
-              </div>
-            ))}
-          </div>
+        <div className="  rounded-[5px] xl:col-span-2 col-span-12 ">
+         <Categories />
         </div>
 
         <div className="xl:col-span-10 col-span-12 " >
@@ -123,26 +92,8 @@ console.log(allCategories)
 
       <div className="container mx-auto grid grid-cols-1 lg:hidden   ">
         <div className=" hidden sm:block rounded-[5px]  ">
-          <div className="drop-shadow bg-[var(--white-color)] rounded-[5px] ps-[15px] pr-[23px] h-[395px] overflow-y-auto scrollbar ">
-            {allCategories?.map((item, index, arr) => (
-              <div
-                key={index}
-                style={{
-                  borderBottom:
-                    index !== arr.length - 1
-                      ? "1px solid rgba(185, 185, 185, 0.2)"
-                      : "none",
-                }}
-                className="  bg-[var(--white-color)]  flex justify-between items-center px-5 py-[11px] w-full"
-              >
-                <div className="flex justify-start items-center gap-[16px]">
-                  <h6 className={`font-normal text-[13px] text-[var(--text-color)]`}>
-                    {item?.name}
-                  </h6>
-                </div>
-                <MdKeyboardArrowDown className="text-[var(--text-color)] -rotate-90" />
-              </div>
-            ))}
+          <div className=" bg-[var(--white-color)] rounded-[5px] lg:ps-[15px] lg:pr-[23px] h-[395px] overflow-y-auto scrollbar ">
+          <Categories />
           </div>
         </div>
 

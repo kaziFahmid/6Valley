@@ -8,8 +8,8 @@ const rubik = Rubik({  weight: [ "400",'600','700','800'], subsets: ["latin"] })
 const Footer = () => {
   return (
     <div className="footer-section ">
-      <div className="footer-top w-full py-[35px]">
-        <div className="mx-auto container flex justify-between items-center">
+      <div className="footer-top w-full py-[20px] md:py-[35px]">
+        <div className="mx-auto container flex-col gap-5 md:gap-0 md:flex-row flex justify-between items-center">
           <div></div>
           <ul className="list-none flex justify-center items-center gap-5">
             <li>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 mx-auto container py-[20px]">
+      <div className="grid xl:gap-0 gap-8 grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 mx-auto container py-[20px]">
         <div>
           <div>
             <Image

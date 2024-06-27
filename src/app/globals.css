@@ -138,3 +138,28 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+/* media queries */
+
+@media (max-width: 640px) {
+  /* Your CSS rules for small screens here */
+}
+
+
+
+@media (max-width: 768px) {
+  /* Your CSS rules for medium screens here */
+}
+
+@media (max-width: 1024px) {
+  /* Your CSS rules for large screens here */
+}
+
+@media (max-width: 1280px) {
+  /* Your CSS rules for extra large screens here */
+}
+
+@media (min-width: 1280px) {
+  /* Your CSS rules for 2xl screens here */
+}

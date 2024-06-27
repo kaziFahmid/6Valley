@@ -17,7 +17,7 @@ const Recommended = async() => {
     <h1 className="font-bold text-[var(text-color)] text-[20px]">Recommended For You</h1>
    </div>
    <div className='mt-[25px]'>
-    <ul className="list-none sm:flex-wrap flex justify-center items-center gap-[61px] flex-col sm:flex-row">
+    <ul className="list-none sm:flex-wrap flex justify-center items-center gap-5 lg:gap-[61px] flex-col sm:flex-row">
         { recommendedLists?.map((item,index,arr)=> <li key={index} className={`pb-[15px] flex justify-between items-center ${index===0&&'border-b-[3px] border-[var(--primary-color)]'}`}  ><span>{item?.title}</span>
        {index===arr.length-1&& <Image src='./award.svg' width={26} height={26} alt='award-img'/>}
         </li>)}

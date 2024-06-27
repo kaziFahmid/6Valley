@@ -3,8 +3,35 @@ import FreeExpressShipping from "../FreeExpressShipping/FreeExpressShipping";
 import { IoSearch } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { getCategories } from "@/api/getCategories";
+import { IoMdClose } from "react-icons/io";
+const Header = async() => {
 
-const Header = () => {
+
+
+  let allCategories= await getCategories();
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       {/* freeExpress shipping */}
@@ -111,12 +138,43 @@ const Header = () => {
   </div>
   <div className="drawer-side">
     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-    <ul className="menu bg-[var(--white-color)] text-base-content min-h-full w-80 p-4">
+    <ul className=" bg-[var(--white-color)] text-base-content min-h-full w-60 p-4">
       {/* Sidebar content here */}
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li className="text-right">
+      <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay flex justify-end items-center"><IoMdClose className="text-[var(--text-color)]  text-2xl"/>  </label>
+      
+      </li>
+      <li>
+     <div className="flex justify-start items-center gap-3"><span>Categories</span> <MdKeyboardArrowDown/> </div>
+     
+    <div className=" bg-[var(--white-color)] rounded-[5px]   h-[395px] overflow-y-auto scrollbar ">
+              {allCategories?.map((item, index, arr) => (
+                <div
+                  key={index}
+                  style={{
+                    borderBottom:
+                      index !== arr.length - 1
+                        ? "1px solid rgba(185, 185, 185, 0.2)"
+                        : "none",
+                  }}
+                  className="  bg-[var(--white-color)]  flex justify-between items-center px-5 py-[11px] w-full"
+                >
+                  <div className="flex justify-start items-center gap-[16px]">
+                    <h6 className={`font-normal text-[13px] text-[var(--text-color)]`}>
+                      {item?.name}
+                    </h6>
+                  </div>
+                  <MdKeyboardArrowDown className="text-[var(--text-color)] -rotate-90" />
+                </div>
+              ))}
+            </div>
+      </li>
+
+     
     </ul>
+
   </div>
+  
 </div>
           
             <Image src="./logo.svg" width={135} height={135} alt="logo-image" />
