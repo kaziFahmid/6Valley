@@ -17,7 +17,7 @@ const BrowseCategory = () => {
               <div className="flex justify-start items-center gap-[16px]">
                 <IoIosMenu className="text-[var(--white-color)]" />
                 <h6 className="font-bold text-[14px] text-[var(--white-color)]">
-               
+               Browse Category
                 </h6>
               </div>
               <MdKeyboardArrowDown className="text-[var(--white-color)]" />
