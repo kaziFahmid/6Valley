@@ -53,16 +53,16 @@ const ProductCard = (props) => {
 
 <div className="text-center mt-[16.12px]">
   <div className="text-center flex justify-center items-center gap-[2px] mb-[3.96px]">
-  <div class="rating rating-sm">
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-[var(--rating-color)]" />
+  <div className="rating rating-sm">
+  <input type="radio" name="rating-6" className="mask mask-star-2 bg-[var(--rating-color)]" />
   <input
     type="radio"
     name="rating-6"
     class="mask mask-star-2 bg-[var(--rating-color)]"
     checked="checked" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-[var(--rating-color)]" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-[var(--rating-color)]" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-[var(--rating-color)]" />
+  <input type="radio" name="rating-6" className="mask mask-star-2 bg-[var(--rating-color)]" />
+  <input type="radio" name="rating-6" className="mask mask-star-2 bg-[var(--rating-color)]" />
+  <input type="radio" name="rating-6" className="mask mask-star-2 bg-[var(--rating-color)]" />
 </div>
 <span className="text-[var(--grey-text-color)] text-[10px] font-normal">({ parseFloat(rating[0]?.average).toFixed(1)})</span>
   </div>
