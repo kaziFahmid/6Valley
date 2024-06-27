@@ -9,18 +9,21 @@ const ProductCard = (props) => {
     category: { name: categoryName },
     purchase_price,
   } = props?.productsData;
+
+  const discountedPrice = purchase_price - (purchase_price * discount) / 100;
+
   return (
     <>
       <div className=" productcard-shadow bg-[var(--white-color)] p-[10px] rounded-[5px]">
         <div className="rounded-[5px] relative product-card">
           <div className="flex flex-col gap-[11px] absolute right-2 top-2  icon-container">
-            <div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
+            <div className="cursor-pointer rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
               <Image src="./activated.svg" width={18} height={18} alt="icon" />
             </div>
-            <div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
+            <div className="cursor-pointer rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
               <Image src="./ph_heart2.svg" width={18} height={18} alt="icon" />
             </div>
-            <div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
+            <div className="cursor-pointer rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
               <Image
                 src="./teenyicons_git-compare-solid.svg"
                 width={18}
@@ -28,7 +31,7 @@ const ProductCard = (props) => {
                 alt="icon"
               />
             </div>
-            <div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
+            <div className="cursor-pointer rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]">
               <Image
                 src="./fluent_eye-16-regular.svg"
                 width={18}
@@ -56,32 +59,15 @@ const ProductCard = (props) => {
         <div className="text-center mt-[16.12px]">
           <div className="text-center flex justify-center items-center gap-[2px] mb-[3.96px]">
             <div className="rating rating-sm">
-              <input
-                type="radio"
-                name="rating-6"
-                className="mask mask-star-2 bg-[var(--rating-color)]"
-              />
-              <input
-                type="radio"
-                name="rating-6"
-                class="mask mask-star-2 bg-[var(--rating-color)]"
-                checked="checked"
-              />
-              <input
-                type="radio"
-                name="rating-6"
-                className="mask mask-star-2 bg-[var(--rating-color)]"
-              />
-              <input
-                type="radio"
-                name="rating-6"
-                className="mask mask-star-2 bg-[var(--rating-color)]"
-              />
-              <input
-                type="radio"
-                name="rating-6"
-                className="mask mask-star-2 bg-[var(--rating-color)]"
-              />
+              {Array.from({ length: 5 }).map((_, index) => (
+                <input
+                  key={index}
+                  type="radio"
+                  name="rating"
+                  className="mask mask-star-2 bg-[var(--rating-color)]"
+                  checked={index < Math.floor(parseFloat(rating[0]?.average))}
+                />
+              ))}
             </div>
             <span className="text-[var(--grey-text-color)] text-[10px] font-normal">
               ({Math.floor(parseFloat(rating[0]?.average))})
@@ -98,7 +84,7 @@ const ProductCard = (props) => {
             <span className="text-[var(--grey-text-color)] text-[12.81px] font-normal line-through ">
               {purchase_price}$
             </span>{" "}
-            {purchase_price - (purchase_price * discount) / 100}$
+            {discountedPrice}$
           </h6>
         </div>
       </div>

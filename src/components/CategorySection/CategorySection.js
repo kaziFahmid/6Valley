@@ -18,7 +18,6 @@ const CategorySection = async () => {
         <h3 className="text-[var(--text-color)] font-bold text-[20px]">
           Categories
         </h3>
-
         <div className="mt-[25px] grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-10">
           {allCategories?.map((data, index, arr) => (
             <CategoryCard key={index} allCategoriesData={data} />

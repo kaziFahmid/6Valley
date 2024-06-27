@@ -29,7 +29,7 @@ const Recommended = () => {
     };
 
     fetchData();
-  }, []);
+  }, [isLoading]);
 
   if (error) {
     return (

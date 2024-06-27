@@ -30,7 +30,7 @@ const AllProducts = () => {
     };
 
     fetchData();
-  }, []);
+  }, [isLoading]);
 
   if (error) {
     return (

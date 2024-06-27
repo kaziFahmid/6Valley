@@ -12,9 +12,7 @@ const Header = async () => {
 
   return (
     <>
-    {/* 50%off black friday */}
-    <FiftyPercent/>
-      {/* freeExpress shipping */}
+      <FiftyPercent />
       <FreeExpressShipping />
       <div
         className="bg-[var(--white-color)]   py-[17px] lg:block hidden"
@@ -102,7 +100,8 @@ const Header = async () => {
           </div>
         </div>
       </div>
-      {/* for mobile */}
+
+      {/* for mobile devices */}
 
       <div
         className="bg-[var(--white-color)]   py-[17px] block  lg:hidden"
@@ -168,41 +167,30 @@ const Header = async () => {
                     </div>
                   </li>
 
-
-
                   <li className="text-[var(--text-color)] font-semibold mb-3">
-                Home
-              </li>
-              <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold mb-3 ">
-                <span>Offers</span>
-                <MdKeyboardArrowDown className="text-[var(--text-color)] font-semibold" />
-              </li>
-              <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold mb-3 ">
-                <span>Stores</span>
-                <MdKeyboardArrowDown className="text-[var(--text-color)] font-semibold" />
-              </li>
-              <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold mb-3">
-                <span>Brands</span>
-                <MdKeyboardArrowDown className="text-[var(--text-color)] font-semibold" />
-              </li>
-              <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold ">
-                <span>Discounted Products</span>
-                <img
-                  src={"./teenyicons_discount-solid.svg"}
-                  width={15}
-                  height={15}
-                  alt="teenyicons_discount-solid"
-                />
-              </li>
-
-
-
-
-
-
-
-
-
+                    Home
+                  </li>
+                  <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold mb-3 ">
+                    <span>Offers</span>
+                    <MdKeyboardArrowDown className="text-[var(--text-color)] font-semibold" />
+                  </li>
+                  <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold mb-3 ">
+                    <span>Stores</span>
+                    <MdKeyboardArrowDown className="text-[var(--text-color)] font-semibold" />
+                  </li>
+                  <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold mb-3">
+                    <span>Brands</span>
+                    <MdKeyboardArrowDown className="text-[var(--text-color)] font-semibold" />
+                  </li>
+                  <li className="flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold ">
+                    <span>Discounted Products</span>
+                    <img
+                      src={"./teenyicons_discount-solid.svg"}
+                      width={15}
+                      height={15}
+                      alt="teenyicons_discount-solid"
+                    />
+                  </li>
                 </ul>
               </div>
             </div>
@@ -214,8 +202,7 @@ const Header = async () => {
           <div>
             <ul className="list-none flex justify-center items-center gap-6">
               <li>
-                <SearchBox/>
-               
+                <SearchBox />
               </li>
               <li>
                 <Image
