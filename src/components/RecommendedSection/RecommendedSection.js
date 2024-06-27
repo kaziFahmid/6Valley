@@ -1,10 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import Title from "./Title";
 import ProductSkeletonLoader from "../ProductSkeletonLoader/ProductSkeletonLoader";
-
-const AllProducts = () => {
+import RecomendedLists from "./RecomendedLists";
+import { useEffect, useState } from "react";
+const RecommendedSection = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,15 +38,20 @@ const AllProducts = () => {
       </div>
     );
   }
-
   return (
     <>
-      <div className="container mx-auto mt-[40px]">
-        <div className="border-b border-[var(--border-color)] pb-[22px]">
-          <Title />
+      <div className="mt-[49px]">
+        <div className="text-center">
+          <h1 className="font-bold text-[var(text-color)] text-[20px]">
+            Recommended For You
+          </h1>
+        </div>
+        <div className="mt-[25px]">
+          <RecomendedLists />
         </div>
 
-        <div className="mt-[25px] grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  gap-[15px]">
+        {/* products */}
+        <div className="mt-[20px] grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 gap-[15px] container mx-auto">
           {isLoading
             ? [...new Array(10)]?.map((item, index) => (
                 <ProductSkeletonLoader key={index} />
@@ -61,4 +65,4 @@ const AllProducts = () => {
   );
 };
 
-export default AllProducts;
+export default RecommendedSection;

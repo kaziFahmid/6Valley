@@ -1,17 +1,17 @@
-import AllProducts from "@/components/AllProducts/AllProducts";
+import AllProductsSection from "@/components/AllProductsSection/AllProductsSection";
 import CategorySection from "@/components/CategorySection/CategorySection";
 import HeroSection from "@/components/HeroSection/HeroSection";
-import Recommended from "@/components/Recommended/Recommended";
+import RecommendedSection from "@/components/RecommendedSection/RecommendedSection";
 import Services from "@/components/Services/Services";
 
 export default function Home() {
   return (
-<>
-<HeroSection/>
-<Recommended/>
-<CategorySection/>
-<AllProducts/>
-<Services/>
-</>
+    <>
+      <HeroSection />
+      <RecommendedSection />
+      <CategorySection />
+      <AllProductsSection />
+      <Services />
+    </>
   );
 }
