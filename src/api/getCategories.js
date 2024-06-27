@@ -2,7 +2,7 @@
 
 export const getCategories = async () => {
   try {
-    const response = await fetch('https://6valley.6amtech.com/api/v1/categories?guest_id=1');
+    const response = await fetch('https://6valley.6amtech.com/api/v1/categories?guest_id=1', { cache: 'force-cache',next: { revalidate: 30000,} });
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
