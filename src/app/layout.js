@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={mulish.className}>
        
         <Header/>
-    <div className="min-h-screen">
+    <div>
 
     {children}
     </div>
