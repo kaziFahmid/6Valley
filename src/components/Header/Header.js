@@ -44,7 +44,7 @@ const Header = async () => {
                 <input
                   type="search"
                   placeholder="Search for items or store..."
-                  className="w-full"
+                  className="w-full "
                 />
               </div>
               <button className="bg-[var(--primary-color)] rounded-e-[25px] px-[20px] py-[11px]">

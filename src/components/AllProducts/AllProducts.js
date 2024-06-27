@@ -1,38 +1,64 @@
-import { Rubik } from "next/font/google";
-import ProductCard from "../ProductCard/ProductCard"
-import { getProducts } from "@/api/getProducts";
+"use client";
+import { useEffect, useState } from "react";
+import ProductCard from "../ProductCard/ProductCard";
+import Title from "./Title";
+import ProductSkeletonLoader from "../ProductSkeletonLoader/ProductSkeletonLoader";
 
+const AllProducts = () => {
+  const [allProducts, setAllProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-const rubik = Rubik({  weight: [ "400","500","600","700","800"], subsets: ["latin"] });
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://6valley.6amtech.com/api/v1/products/top-rated?guest_id=1&limit=10&offset=1"
+        );
 
-const AllProducts = async () => {
-    let allProducts= await getProducts();
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-if(allProducts?.error){
-    return<div className="text-center mt-[40px]">
-        <h2 className="text-[var(--red-color)]">{products?.error}</h2>
-    </div>
-}
+        const data = await response.json();
+        setAllProducts(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+        setError(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return (
+      <div className="text-center mt-[40px]">
+        <h2 className="text-[var(--red-color)]">{error}</h2>
+      </div>
+    );
+  }
+
   return (
     <>
-    
-    <div className="container mx-auto mt-[40px]">
-    <div className="border-b border-[var(--border-color)] pb-[22px]">
-        <h3 className={`text-[var(--text-color)] font-medium text-[20px] ${rubik.className}`}>All Products</h3>
-    </div>
-<div className="mt-[25px] grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  gap-[15px]">
+      <div className="container mx-auto mt-[40px]">
+        <div className="border-b border-[var(--border-color)] pb-[22px]">
+          <Title />
+        </div>
 
-
-
-{allProducts?.products?.map((data,index)=> <ProductCard key={index} productsData={data}/>)}
-
-    </div>
-    </div>
-    
-    
-    
+        <div className="mt-[25px] grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  gap-[15px]">
+          {isLoading
+            ? [...new Array(10)]?.map((item, index) => (
+                <ProductSkeletonLoader key={index} />
+              ))
+            : allProducts?.products?.map((data, index) => (
+                <ProductCard key={index} productsData={data} />
+              ))}
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default AllProducts
+export default AllProducts;
