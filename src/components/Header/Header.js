@@ -6,11 +6,14 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { getCategories } from "@/api/getCategories";
 import { IoMdClose } from "react-icons/io";
 import SearchBox from "./SearchBox";
+import FiftyPercent from "../FiftyPercent/FiftyPercent";
 const Header = async () => {
   let allCategories = await getCategories();
 
   return (
     <>
+    {/* 50%off black friday */}
+    <FiftyPercent/>
       {/* freeExpress shipping */}
       <FreeExpressShipping />
       <div

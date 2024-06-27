@@ -38,6 +38,12 @@ body {
   
   background-color: var(--background-color);
 }
+.fiftypercent-bg{
+  background: url(./../../public/gradient-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .drop-shadow {
   box-shadow: 0px 10px 20px -3px #919eab0d;
   box-shadow: 0px 0px 2px 0px #919eab33;
