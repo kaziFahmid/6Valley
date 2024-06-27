@@ -1,57 +1,96 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
---primary-color:#1B7FED;
---secondary-color:#09336F;
---deep-blue-color:#0D1D35;
---text-color:#222222;
---grey-text-color:#9B9B9B;
---white-color:#FFFFFF;
---red-color:#DB2222;
---grey-bg-color:#F2F3F4;
---rating-color:#FFBA49;
---border-color:#22222280;
---background-color:#FCFCFC;
---service-des-color:#737373
+  --primary-color: #1b7fed;
+  --secondary-color: #09336f;
+  --deep-blue-color: #0d1d35;
+  --text-color: #222222;
+  --grey-text-color: #9b9b9b;
+  --white-color: #ffffff;
+  --red-color: #db2222;
+  --grey-bg-color: #f2f3f4;
+  --rating-color: #ffba49;
+  --border-color: #22222280;
+  --background-color: #fcfcfc;
+  --service-des-color: #737373;
 }
-body{
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width:thin; /* Firefox */
+}
+
+
+}
+
+
+body {
+  
   background-color: var(--background-color);
 }
-.drop-shadow{
-  box-shadow: 0px 10px 20px -3px #919EAB0D; box-shadow: 0px 0px 2px 0px #919EAB33;
+.drop-shadow {
+  box-shadow: 0px 10px 20px -3px #919eab0d;
+  box-shadow: 0px 0px 2px 0px #919eab33;
 }
 
-.productcard-shadow{
-  box-shadow: 0px 9.15px 18.29px -2.74px #919EAB0D; box-shadow: 0px 0px 1.83px 0px #919EAB33;
+.productcard-shadow {
+  box-shadow: 0px 9.15px 18.29px -2.74px #919eab0d;
+  box-shadow: 0px 0px 1.83px 0px #919eab33;
 }
-.banner1{
-  background:url(./../../public/Banner.png);
+.banner1 {
+  background: url(./../../public/Banner.png);
   background-position: center;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.banner2{
-  background:url(./../../public/thithcho3.jpg.png);
+.banner2 {
+  background: url(./../../public/thithcho3.jpg.png);
   background-position: center;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.banner3{
-  background:url(./../../public/thithcho2.jpg.png);
+.banner3 {
+  background: url(./../../public/thithcho2.jpg.png);
   background-position: center;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.banner4{
-  background: url(./../../public/banner4.png); 
-background-color: #172D50;
+.banner4 {
+  background: url(./../../public/banner4.png);
+  background-color: #172d50;
   background-position: bottom;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.product-card:hover .icon-container {
+  visibility: visible;
+  opacity: 1;
 }
 
 
@@ -64,23 +103,38 @@ background-color: #172D50;
 
 
 
-.footer-section{
 
-  background:linear-gradient(to right, rgba(23, 28, 45, 0.945), rgba(23, 28, 45, 0.97)), url(https://www.ittadyshop.xyz/public/65a378848724b.jpg);
+
+
+
+
+
+
+
+
+
+
+
+.footer-section {
+  background: linear-gradient(
+      to right,
+      rgba(23, 28, 45, 0.897),
+      rgba(23, 28, 45, 0.897)
+    ),
+    url(https://www.ittadyshop.xyz/public/65a378848724b.jpg);
   background-position: top;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.footer-top{
-
-  background:  url(./../../public/footertop.png);
-  background-position:center;
-  background-repeat:no-repeat;
-  background-size:cover;
+.footer-top {
+  background: url(./../../public/footertop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.footer-bottom{
-  background:  url(./../../public/footertop.png);
-  background-position:center;
-  background-repeat:no-repeat;
-  background-size:cover;
+.footer-bottom {
+  background: url(./../../public/footertop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

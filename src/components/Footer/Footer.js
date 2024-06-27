@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import {footerNavLists} from './footerNavLists'
+import { footerNavLists } from "./footerNavLists";
+import {Rubik} from "next/font/google";
+
+const rubik = Rubik({  weight: [ "400",'600','700','800'], subsets: ["latin"] });
+
 const Footer = () => {
   return (
     <div className="footer-section ">
@@ -62,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 mx-auto container py-[20px]">
+      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 mx-auto container py-[20px]">
         <div>
           <div>
             <Image
@@ -96,63 +100,63 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center items-center">
-<div>
-<h5 className="text-[var(--white-color)] font-bold text-[16px]">{footerNavLists?.title1}</h5>
-<ul className="list-none mt-[9px] ">
-{footerNavLists?.accountLists?.map((item,index)=><li key={index} className="text-[var(--white-color)] text-[14px] mb-[9px]">{item}</li>)}
-</ul>
-</div>
-        </div>
-     
-
-
-        <div className="flex justify-center items-center">
-<div>
-<h5 className="text-[var(--white-color)] font-bold text-[16px]">{footerNavLists?.title2}</h5>
-<ul className="list-none mt-[9px] ">
-{footerNavLists?.quicklinkLists?.map((item,index)=><li key={index} className="text-[var(--white-color)] text-[14px] mb-[9px]">{item}</li>)}
-</ul>
-</div>
+        <div className="flex lg:justify-center items-center">
+          <div>
+            <h5 className="text-[var(--white-color)] font-bold text-[16px]">
+              {footerNavLists?.title1}
+            </h5>
+            <ul className="list-none mt-[9px] ">
+              {footerNavLists?.accountLists?.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-[var(--white-color)] text-[14px] mb-[9px]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <div className="flex justify-center items-center">
-<div>
-<h5 className="text-[var(--white-color)] font-bold text-[16px]">{footerNavLists?.title3}</h5>
-<ul className="list-none mt-[9px] ">
-{footerNavLists?.otherLists?.map((item,index)=><li key={index} className="text-[var(--white-color)] text-[14px] mb-[9px]">{item}</li>)}
-</ul>
-</div>
+        <div className="flex  lg:justify-center items-center">
+          <div>
+            <h5 className="text-[var(--white-color)] font-bold text-[16px]">
+              {footerNavLists?.title2}
+            </h5>
+            <ul className="list-none mt-[9px] ">
+              {footerNavLists?.quicklinkLists?.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-[var(--white-color)] text-[14px] mb-[9px]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+        <div className="flex  lg:justify-center items-center">
+          <div>
+            <h5 className={`text-[var(--white-color)] font-bold text-[16px] ${rubik.className}`}>
+              {footerNavLists?.title3}
+            </h5>
+            <ul className="list-none mt-[9px] ">
+              {footerNavLists?.otherLists?.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-[var(--white-color)] text-[14px] mb-[9px]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div className="footer-bottom w-full py-[24px] text-center">
-        <h6 className="text-[var(--white-color)] text-[14px]">
+        <h6 className={`text-[var(--white-color)] text-[14px] ${rubik?.className}`}>
           2021 COPYRIGHT All Rights Reserved By 6amMart.com
         </h6>
       </div>

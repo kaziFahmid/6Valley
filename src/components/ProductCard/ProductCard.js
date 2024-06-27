@@ -13,7 +13,21 @@ const ProductCard = (props) => {
   return (
     <>
     <div className=" productcard-shadow bg-[var(--white-color)] p-[10px] rounded-[5px]">
-<div className= 'rounded-[5px] relative'>
+<div className= 'rounded-[5px] relative product-card'>
+
+
+<div className="flex flex-col gap-[11px] absolute right-2 top-2  icon-container">
+<div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]"><Image src='./activated.svg' width={18} height={18} alt="icon"/></div>
+<div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]"><Image src='./ph_heart2.svg' width={18} height={18} alt="icon"/></div>
+<div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]"><Image src='./teenyicons_git-compare-solid.svg' width={18} height={18} alt="icon"/></div>
+<div className="rounded-full w-[30px] h-[30px] border border-[var(--primary-color)] flex justify-center items-center bg-[var(--white-color)]"><Image src='./fluent_eye-16-regular.svg'  width={18} height={18}alt="icon"/></div>
+</div>
+
+
+
+
+
+
 <div>
 <Image src={`https://6valley.6amtech.com/storage/app/public/product/${images[0]}`}width={500} height={500} alt={name} className="  h-[175px] rounded-[5px] object-cover"/>
 </div>

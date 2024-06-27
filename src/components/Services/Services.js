@@ -6,7 +6,7 @@ import NewSletter from './NewSletter/NewSletter'
 const Services = () => {
   return (
     <div className='bg-[var(--grey-bg-color)] pt-[23px] mt-[115px] pb-[21px]'>
-<div className='mx-auto container grid grid-cols-6'>
+<div className='mx-auto container  grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6  gap-[20px] xl:gap-0'>
 {servicesList?.map((item,index)=><div key={index} className='text-center px-[26px]' style={{borderRight:item?.img2?"none": '0.5px solid #0000004D'}}>
     <div className='flex justify-center  items-center gap-[11px]'> 
         <Image src={item?.img} width={30} height={30} alt={item.title} />

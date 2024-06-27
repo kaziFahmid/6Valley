@@ -3,13 +3,14 @@ import FreeExpressShipping from "../FreeExpressShipping/FreeExpressShipping";
 import { IoSearch } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
+
 const Header = () => {
   return (
     <>
       {/* freeExpress shipping */}
       <FreeExpressShipping />
       <div
-        className="bg-[var(--white-color)]   py-[17px]"
+        className="bg-[var(--white-color)]   py-[17px] lg:block hidden"
         style={{ borderBottom: "1px solid rgba(185, 185, 185, 0.2)" }}
       >
         <div className="container mx-auto flex justify-between items-center ">
@@ -56,24 +57,93 @@ const Header = () => {
                   alt="profile"
                 />
               </li>
-              <li className="border-r border-[var(border-color)] pr-[15px]">
+              <li className="border-r border-[var(border-color)] pr-[15px] relative">
+              <div className="bg-[var(--primary-color)] absolute -top-2 right-0 w-[20px] h-[20px] rounded-full flex justify-center items-center "><span className="text-[12px] font-normal text-[var(--white-color)]">6</span></div>
                 <Image
                   src="/ri_shuffle-fill.png"
-                  width={24}
-                  height={24}
+                  width={21}
+                  height={21}
                   alt="ri_shuffle-fill"
                 />
+            
               </li>
-              <li className="border-r border-[var(border-color)] pr-[15px]">
+              <li className="border-r border-[var(border-color)] pr-[15px] relative">
+              <div className="bg-[var(--primary-color)] absolute -top-2 right-0 w-[20px] h-[20px] rounded-full flex justify-center items-center "><span className="text-[12px] font-normal text-[var(--white-color)]">6</span></div>
                 <Image
                   src="/ph_heart.png"
-                  width={24}
-                  height={24}
+                  width={23}
+                  height={23}
                   alt="ph_heart"
                 />
               </li>
-              <li>
-                <Image src="/Group.png" width={18} height={18} alt="cart" />
+              <li className="relative pr-[15px]">
+              <div className="bg-[var(--primary-color)] absolute -top-2 right-0 w-[20px] h-[20px] rounded-full flex justify-center items-center "><span className="text-[12px] font-normal text-[var(--white-color)]">6</span></div>
+                <Image src="/Group.png" width={17} height={17} alt="cart" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* for mobile */}
+
+      <div
+        className="bg-[var(--white-color)]   py-[17px] block  lg:hidden"
+        style={{ borderBottom: "1px solid rgba(185, 185, 185, 0.2)" }}
+      >
+        <div className="container mx-auto flex justify-between items-center ">
+       
+
+
+      
+
+
+
+
+
+          {/* logo */}
+          <div className="flex justify-start items-center gap-2">
+               {/* drawer */}
+          <div className="drawer">
+  <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+  <div className="drawer-content">
+    {/* Page content here */}
+    <label htmlFor="my-drawer" className=" drawer-button">  <IoIosMenu  className="text-[var(--primary-color)] text-4xl"/></label>
+  </div>
+  <div className="drawer-side">
+    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+    <ul className="menu bg-[var(--white-color)] text-base-content min-h-full w-80 p-4">
+      {/* Sidebar content here */}
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  </div>
+</div>
+          
+            <Image src="./logo.svg" width={135} height={135} alt="logo-image" />
+          </div>
+        
+      
+          {/* profiles and others */}
+          <div>
+            <ul className="list-none flex justify-center items-center gap-6">
+            <li >
+                < IoSearch
+           className="text-[var(--grey-text-color)] text-2xl "
+                />
+              </li>
+              <li >
+                <Image
+                  src="/profile.png"
+                  width={24}
+                  height={24}
+                  alt="profile"
+                />
+              </li>
+             
+            
+              <li className="relative ">
+            
+                <Image src="/Group.png" width={17} height={17} alt="cart" />
               </li>
             </ul>
           </div>
