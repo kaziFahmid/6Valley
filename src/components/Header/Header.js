@@ -104,7 +104,7 @@ const Header = async () => {
       {/* for mobile devices */}
 
       <div
-        className="bg-[var(--white-color)]   py-[17px] block  lg:hidden"
+        className="bg-[var(--white-color)]  px-2  py-[17px] block  lg:hidden"
         style={{ borderBottom: "1px solid rgba(185, 185, 185, 0.2)" }}
       >
         <div className="container mx-auto flex justify-between items-center ">

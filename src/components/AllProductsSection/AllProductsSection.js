@@ -42,7 +42,7 @@ const AllProductsSection = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-[40px]">
+      <div className="container mx-auto mt-[40px] sm:px-0 px-2">
         <div className="border-b border-[var(--border-color)] pb-[22px]">
           <Title />
         </div>

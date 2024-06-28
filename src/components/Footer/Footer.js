@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid xl:gap-0 gap-8 grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 mx-auto container py-[20px]">
+      <div className="grid px-2 sm:px-0 xl:gap-0 gap-8 grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 mx-auto container py-[20px]">
         <div>
           <div>
             <Image

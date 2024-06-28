@@ -40,7 +40,7 @@ const RecommendedSection = () => {
   }
   return (
     <>
-      <div className="mt-[49px]">
+      <div className="mt-[49px] sm:px-0 px-2">
         <div className="text-center">
           <h1 className="font-bold text-[var(text-color)] text-[20px]">
             Recommended For You

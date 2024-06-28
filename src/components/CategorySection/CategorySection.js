@@ -15,7 +15,7 @@ const CategorySection = async () => {
 
     return (
       <>
-        <div className="mx-auto container w-full bg-[var(--white-color)] my-[40px] productcard-shadow px-[15px] py-[15px] rounded-[5px]">
+        <div className="mx-auto  container w-full bg-[var(--white-color)] my-[40px] productcard-shadow px-[15px] py-[15px] rounded-[5px]">
           <h3 className="text-[var(--text-color)] font-bold text-[20px]">
             Categories
           </h3>

@@ -7,7 +7,7 @@ const poppins = Poppins({
 });
 const NewSletter = () => {
   return (
-    <div className="bg-[var(--secondary-color)] rounded-[10px] px-[48px] py-[28.5px] grid grid-cols-12 mt-[23px] gap-5 lg:gap-0">
+    <div className="bg-[var(--secondary-color)] sm:rounded-[10px] px-[48px] py-[28.5px] grid grid-cols-12 mt-[23px] gap-5 lg:gap-0">
       <div className="text-left  col-span-12 lg:col-span-8">
         <h2 className="text-[var(--white-color)] text-[18px] font-semibold">
           Newsletter
