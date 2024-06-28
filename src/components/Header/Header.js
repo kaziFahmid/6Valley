@@ -3,9 +3,9 @@ import FreeExpressShipping from "../FreeExpressShipping/FreeExpressShipping";
 import { IoSearch } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { getCategories } from "@/api/getCategories";
+import { getCategories } from "@/lib/getCategories";
 import { IoMdClose } from "react-icons/io";
-import SearchBox from "./SearchBox";
+import SearchBox from "../SearchBox/SearchBox";
 import FiftyPercent from "../FiftyPercent/FiftyPercent";
 const Header = async () => {
   let allCategories = await getCategories();

@@ -1,8 +1,9 @@
 "use client";
 import { memo, useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import Title from "./Title";
+import Title from "../Title/Title";
 import ProductSkeletonLoader from "../ProductSkeletonLoader/ProductSkeletonLoader";
+import { BASE_URL } from "@/lib/api";
 
 const AllProductsSection = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -13,7 +14,7 @@ const AllProductsSection = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://6valley.6amtech.com/api/v1/products/top-rated?guest_id=1&limit=10&offset=1"
+          `${BASE_URL}/products/top-rated?guest_id=1&limit=10&offset=1`
         );
 
         if (!response.ok) {
@@ -44,7 +45,7 @@ const AllProductsSection = () => {
     <>
       <div className="container mx-auto mt-[40px] sm:px-0 px-2">
         <div className="border-b border-[var(--border-color)] pb-[22px]">
-          <Title />
+          <Title text={'All Products'} />
         </div>
 
         <div className="mt-[25px] grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  gap-[15px]">

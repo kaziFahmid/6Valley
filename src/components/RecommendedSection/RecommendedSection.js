@@ -1,4 +1,5 @@
 "use client";
+import { BASE_URL } from "@/lib/api";
 import ProductCard from "../ProductCard/ProductCard";
 import ProductSkeletonLoader from "../ProductSkeletonLoader/ProductSkeletonLoader";
 import RecomendedLists from "./RecomendedLists";
@@ -12,7 +13,7 @@ const RecommendedSection = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://6valley.6amtech.com/api/v1/products/top-rated?guest_id=1&limit=10&offset=1"
+          `${BASE_URL}/products/top-rated?guest_id=1&limit=10&offset=1`
         );
 
         if (!response.ok) {

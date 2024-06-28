@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { footerNavLists } from "./footerNavLists";
+import { footerNavLists } from "@/lib/listDatas";
 import { Rubik } from "next/font/google";
 
 const rubik = Rubik({

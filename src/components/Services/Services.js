@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { servicesList } from "./servicesList";
-import NewSletter from "./NewSletter/NewSletter";
+
+import NewSletter from "../NewSletter/NewSletter";
+import { servicesList } from "@/lib/listDatas";
 
 const Services = () => {
   return (

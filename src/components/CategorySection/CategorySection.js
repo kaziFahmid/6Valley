@@ -1,5 +1,6 @@
-import { getCategories } from "@/api/getCategories";
-import CategoryCard from "./CategoryCard";
+
+import { getCategories } from "@/lib/getCategories";
+import CategoryCard from "../CategoryCard/CategoryCard";
 
 const CategorySection = async () => {
   let allCategories = await getCategories();

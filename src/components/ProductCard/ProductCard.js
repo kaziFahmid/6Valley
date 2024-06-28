@@ -1,3 +1,4 @@
+import { PRODUCT_IMAGE_BASE_PATH } from "@/lib/api";
 import Image from "next/image";
 import { Rating } from "primereact/rating";
 const ProductCard = (props) => {
@@ -11,6 +12,7 @@ const ProductCard = (props) => {
   } = props?.productsData;
   const discountedPrice = purchase_price - (purchase_price * discount) / 100;
   const ratingValue = Math.floor(parseFloat(rating[0]?.average));
+  const productImage=`${PRODUCT_IMAGE_BASE_PATH}/${images[0]}`
   return (
     <>
       <div className=" productcard-shadow bg-[var(--white-color)] p-[10px] rounded-[5px]">
@@ -42,7 +44,7 @@ const ProductCard = (props) => {
 
           <div>
             <Image
-              src={`https://6valley.6amtech.com/storage/app/public/product/${images[0]}`}
+              src={productImage}
               width={500}
               height={500}
               alt={name}

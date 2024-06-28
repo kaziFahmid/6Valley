@@ -1,4 +1,4 @@
-import { getCategories } from "@/api/getCategories";
+import { getCategories } from "@/lib/getCategories";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Categories = async () => {

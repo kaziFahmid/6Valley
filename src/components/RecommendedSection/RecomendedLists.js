@@ -1,6 +1,7 @@
 "use client";
+import { recommendedLists } from "@/lib/listDatas";
 import React, { memo, useState } from "react";
-import { recommendedLists } from "./recommendedLists";
+
 
 const RecomendedLists = () => {
   const [active, setActive] = useState(0);
