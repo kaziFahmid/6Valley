@@ -2,7 +2,7 @@
 import ProductCard from "../ProductCard/ProductCard";
 import ProductSkeletonLoader from "../ProductSkeletonLoader/ProductSkeletonLoader";
 import RecomendedLists from "./RecomendedLists";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 const RecommendedSection = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -65,4 +65,4 @@ const RecommendedSection = () => {
   );
 };
 
-export default RecommendedSection;
+export default memo(RecommendedSection);

@@ -1,5 +1,6 @@
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
+import Image from "next/image";
 
 const BrowseCategory = () => {
   return (
@@ -40,7 +41,7 @@ const BrowseCategory = () => {
               </li>
               <li className="  cursor-pointer flex justify-start items-center gap-[10px] text-[var(--text-color)] font-semibold text-[13px] hover:text-[var(--primary-color)]">
                 <span>Discounted Products</span>
-                <img
+                <Image
                   src={"./teenyicons_discount-solid.svg"}
                   width={15}
                   height={15}

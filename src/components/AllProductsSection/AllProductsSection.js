@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import Title from "./Title";
 import ProductSkeletonLoader from "../ProductSkeletonLoader/ProductSkeletonLoader";
@@ -61,4 +61,4 @@ const AllProductsSection = () => {
   );
 };
 
-export default AllProductsSection;
+export default memo(AllProductsSection);
