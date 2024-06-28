@@ -11,8 +11,9 @@ const Categories = async () => {
       </div>
     );
   }
+ 
   return (
-    <div className="drop-shadow bg-[var(--white-color)] rounded-[5px] ps-[15px] pr-[23px] h-[395px] overflow-y-auto scrollbar pb-[24px] ">
+    <div className="drop-shadow bg-[var(--white-color)] rounded-[5px] ps-[15px] pr-[23px] h-[395px] overflow-y-auto scrollbar ">
       {allCategories?.map((item, index, arr) => (
         <div
           key={index}

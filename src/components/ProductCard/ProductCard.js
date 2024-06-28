@@ -9,9 +9,8 @@ const ProductCard = (props) => {
     category: { name: categoryName },
     purchase_price,
   } = props?.productsData;
-
   const discountedPrice = purchase_price - (purchase_price * discount) / 100;
-
+  const ratingValue = Math.floor(parseFloat(rating[0]?.average));
   return (
     <>
       <div className=" productcard-shadow bg-[var(--white-color)] p-[10px] rounded-[5px]">
@@ -58,10 +57,14 @@ const ProductCard = (props) => {
 
         <div className="text-center mt-[16.12px]">
           <div className="text-center flex justify-center items-center gap-[2px] mb-[3.96px]">
-          
-            <Rating value={Math.floor(parseFloat(rating[0]?.average))} readOnly cancel={false}  style={{color:"var(--rating-color)"}} />
+            <Rating
+              value={ratingValue}
+              readOnly
+              cancel={false}
+              style={{ color: "var(--rating-color)" }}
+            />
             <span className="text-[var(--grey-text-color)] text-[10px] font-normal">
-              ({Math.floor(parseFloat(rating[0]?.average))})
+              ({ratingValue})
             </span>
           </div>
 

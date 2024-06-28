@@ -30,7 +30,7 @@ Ensure you have the following installed on your machine:
 
    Navigate to the project directory and install the necessary dependencies:
 
-
+  ```bash
    npm install
 
 ## Getting Started
