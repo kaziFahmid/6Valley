@@ -28,10 +28,10 @@ Ensure you have the following installed on your machine:
 
 2. **Install dependencies **
 
-Navigate to the project directory and install the necessary dependencies:
+   Navigate to the project directory and install the necessary dependencies:
 
 
-npm install
+   npm install
 
 ## Getting Started
 
