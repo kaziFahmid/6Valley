@@ -9,13 +9,11 @@ const AllProductsSection = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const url = `${BASE_URL}/products/top-rated?guest_id=1&limit=10&offset=1`;
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${BASE_URL}/products/top-rated?guest_id=1&limit=10&offset=1`
-        );
+        const response = await fetch(url);
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -45,7 +43,7 @@ const AllProductsSection = () => {
     <>
       <div className="container mx-auto mt-[40px] sm:px-0 px-2">
         <div className="border-b border-[var(--border-color)] pb-[22px]">
-          <Title text={'All Products'} />
+          <Title text={"All Products"} />
         </div>
 
         <div className="mt-[25px] grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  gap-[15px]">

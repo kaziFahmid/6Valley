@@ -8,13 +8,11 @@ const RecommendedSection = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const url = `${BASE_URL}/products/top-rated?guest_id=1&limit=10&offset=1`;
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${BASE_URL}/products/top-rated?guest_id=1&limit=10&offset=1`
-        );
+        const response = await fetch(url);
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

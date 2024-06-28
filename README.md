@@ -1,12 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-
-
-
 ## 6Valley
 
 This is an e-commerce project made with Next.js 14 that fetches and displays categories and products from a given API.
-
 
 ## Prerequisites
 
@@ -25,13 +21,15 @@ Ensure you have the following installed on your machine:
    git clone <repository_url>
    cd my-app
 
+   ```
 
 2. **Install dependencies **
 
    Navigate to the project directory and install the necessary dependencies:
 
-  ```bash
-   npm install
+````bash
+ npm install
+
 
 ## Getting Started
 
@@ -45,15 +43,13 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-
 
 ## Features
 
@@ -62,15 +58,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Error handling for data fetching
 - Responsive and user-friendly UI
 
-
 ## Live Link
 
 - Live Link : https://6-valley.vercel.app/
-
-
-
-
-
 
 ## Learn More
 
