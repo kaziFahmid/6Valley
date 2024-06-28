@@ -17,7 +17,7 @@ Ensure you have the following installed on your machine:
 
 ## Installation
 
-1. **Clone the repository**
+1. **Clone the repository **
 
    Clone the repository to your local machine:
 
@@ -26,6 +26,12 @@ Ensure you have the following installed on your machine:
    cd my-app
 
 
+2. **Install dependencies **
+
+Navigate to the project directory and install the necessary dependencies:
+
+
+npm install
 
 ## Getting Started
 
