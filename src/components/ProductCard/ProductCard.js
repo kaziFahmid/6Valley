@@ -7,7 +7,7 @@ const ProductCard = (props) => {
     rating,
     images,
     discount,
-    category: { name: categoryName },
+    // category: { name: categoryName },
     purchase_price,
   } = props?.productsData;
   const discountedPrice = purchase_price - (purchase_price * discount) / 100;
@@ -71,7 +71,7 @@ const ProductCard = (props) => {
           </div>
 
           <p className="text-[var(--grey-text-color)] text-[10.98px] font-normal">
-            {categoryName}
+            {/* {categoryName} */}
           </p>
           <h6 className="text-[var(--text-color)] text-[14.64px] font-bold">
             {name}

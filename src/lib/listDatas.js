@@ -33,11 +33,11 @@ export const servicesList = [
 ];
 
 export const recommendedLists = [
-  { title: "Featured Products" },
-  { title: "Top Rated" },
-  { title: "Best Selling" },
-  { title: "Latest Products" },
-  { title: "New Arrivals " },
+  { title: "Featured Products",value:'featured' },
+  { title: "Top Rated",value: 'top-rated', },
+  { title: "Best Selling",value: 'best-selling', },
+  { title: "Latest Products",value: 'latest', },
+  { title: "New Arrivals ",value: 'new-arrival' },
 ];
 
 export const footerNavLists = {
