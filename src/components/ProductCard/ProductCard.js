@@ -10,6 +10,7 @@ const ProductCard = (props) => {
     category,
     purchase_price,
   } = props?.productsData;
+
   const discountedPrice = purchase_price - (purchase_price * discount) / 100;
   const ratingValue = Math.floor(parseFloat(rating[0]?.average));
   const productImage=`${PRODUCT_IMAGE_BASE_PATH}/${images[0]}`

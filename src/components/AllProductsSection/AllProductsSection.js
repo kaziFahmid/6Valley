@@ -52,8 +52,8 @@ const AllProductsSection = () => {
                 <ProductSkeletonLoader key={index} />
               ))
             : allProducts?.products?.map((data, index) => (
-              <ProductCard key={index} productsData={data} />
-            ))}
+                <ProductCard key={index} productsData={data} />
+              ))}
         </div>
       </div>
     </>

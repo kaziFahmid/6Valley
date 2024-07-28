@@ -61,7 +61,7 @@ const RecommendedSection = () => {
             {allProducts?.products?.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[15px]">
                 {allProducts.products.map((data, index) => (
-                  <ProductCard key={index} productsData={data} />
+                  <ProductCard  key={index} productsData={data} />
                 ))}
               </div>
             ) : (
